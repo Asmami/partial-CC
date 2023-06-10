@@ -19,16 +19,16 @@ entity cmult is
     CAL_WIDTH : natural := 19 --!Calculation width. Max is 28 (output of 2dFFT)
   );
   port (
-    aclk : in std_logic;            
-    arstn : in std_logic;           
+    aclk          : in std_logic;            
+    arstn         : in std_logic;           
     s_axis_tready : out std_logic;  
     s_axis_tvalid : in std_logic;
-    s_axis_tlast : in std_logic;
-    s_axis_tdata : in std_logic_vector(IO_WIDTH * 4 - 1 downto 0);
+    s_axis_tlast  : in std_logic;
+    s_axis_tdata  : in std_logic_vector(IO_WIDTH * 4 - 1 downto 0);
     m_axis_tready : in std_logic;
     m_axis_tvalid : out std_logic;
-    m_axis_tlast : out std_logic;
-    m_axis_tdata : out std_logic_vector(IO_WIDTH * 2 - 1 downto 0)
+    m_axis_tlast  : out std_logic;
+    m_axis_tdata  : out std_logic_vector(IO_WIDTH * 2 - 1 downto 0)
   );
 end entity cmult;
 architecture rtl of cmult is
